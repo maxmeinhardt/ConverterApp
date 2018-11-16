@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/distance"
+        android:icon="@mipmap/ic_default_image"
+        android:title="Distance"
+        />
+    <item
+        android:id="@+id/temperature"
+        android:icon="@mipmap/ic_default_image"
+        android:title="Temperature"
+        />
+    <item
+        android:id="@+id/volume"
+        android:icon="@mipmap/ic_default_image"
+        android:title="Volume"
+        />
+    <item
+        android:id="@+id/weight"
+        android:icon="@mipmap/ic_default_image"
+        android:title="Weight"
+        />
+
+</menu>
