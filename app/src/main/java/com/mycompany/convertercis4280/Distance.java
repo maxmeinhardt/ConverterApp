@@ -29,7 +29,7 @@ public class Distance extends AppCompatActivity{
     private TextView result;
     private Button calculate;
     private RadioGroup radioGroup;
-    private Button back;
+
     private static final int ACTIVITY_NUM = 0;
 
         @Override
@@ -45,7 +45,7 @@ public class Distance extends AppCompatActivity{
             result = findViewById(R.id.result);
             calculate = findViewById(R.id.calculate);
             radioGroup = findViewById(R.id.radioGroup);
-            back = findViewById(R.id.back);
+
 
             // set unit text
             unitText.setText(R.string.mi);
