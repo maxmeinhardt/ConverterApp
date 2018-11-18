@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">ConverterCIS4280</string>
+    <string name="temperature">Temperature</string>
+    <string name="weight">Weight</string>
+    <string name="volume">Volume</string>
+    <string name="celsius">Celsius</string>
+    <string name="c">°C</string>
+    <string name="fahrenheit">Fahrenheit</string>
+    <string name="f">°F</string>
+    <string name="miles">Miles</string>
+    <string name="mi">mi.</string>
+    <string name="kilometers">Kilometers</string>
+    <string name="km">KM</string>
+    <string name="pounds">Pounds</string>
+    <string name="lbs">lbs</string>
+    <string name="kilograms">Kilograms</string>
+    <string name="kg">kg</string>
+    <string name="gallons">Gallons</string>
+    <string name="gal">gal.</string>
+    <string name="liters">Liters</string>
+    <string name="l">L</string>
+    <string name="distance">Distance</string>
+    <string name="enter_a_value">Enter a value</string>
+    <string name="result">Result</string>
+    <string name="calculate">Calculate</string>
+    <string name="back">Back</string>
 </resources>

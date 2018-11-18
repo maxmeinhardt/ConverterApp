@@ -36,6 +36,34 @@ public class Weight extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weight);
 
+        // assign variable to xml layout
+        editText = findViewById(R.id.editText);
+        editText.addTextChangedListener(editTextWatcher);
+        unitText = findViewById(R.id.unit);
+        result = findViewById(R.id.result);
+        calculate = findViewById(R.id.calculate);
+        radioGroup = findViewById(R.id.radioGroup);
+        back = findViewById(R.id.back);
+
+        // set unit text
+        unitText.setText(R.string.lbs);
+        // set result to empty string
+        result.setText("");
+
+        // create on click method for convert button
+        calculate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                // call convert method when button is clicked
+                convert();
+            }
+        }); // end of calculate on click
+
+
+
+
+
         setupBottomNavigationView();
     }
 

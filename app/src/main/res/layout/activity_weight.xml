@@ -9,11 +9,87 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Weight Activity"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_centerHorizontal="true"
+        android:text="@string/weight"
+        android:id="@+id/title"
+        android:textSize="50sp"
+
+        />
+
+    <EditText
+        android:autofillHints="@string/weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/title"
+        android:id="@+id/editText"
+        android:layout_marginTop="120dp"
+        android:hint="@string/enter_a_value"
+        android:textSize="20sp"
+        android:inputType="numberDecimal"
+        />
+
+    <TextView
+        android:id="@+id/unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editText"
+        android:layout_toEndOf="@+id/editText"
+        android:text="@string/lbs"
+        android:textSize="20sp" />
+
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editText"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:id="@+id/radioGroup"
+        android:layout_marginTop="40dp">
+
+
+        <RadioButton
+            android:id="@+id/pounds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pounds"
+            android:onClick="radioButtonClick"
+            android:checked="true"/>
+
+
+        <RadioButton
+            android:id="@+id/kilograms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kilograms"
+            android:onClick="radioButtonClick"
+            />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioGroup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/result"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/calculate"
+        android:layout_below="@id/radioGroup"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        />
+
+
+
 
     <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
         android:id="@+id/BottomNavViewBar"
