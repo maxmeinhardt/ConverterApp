@@ -2,22 +2,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/distance"
-        android:icon="@mipmap/ic_default_image"
+        android:icon="@drawable/menu_distance_edit"
         android:title="Distance"
         />
     <item
         android:id="@+id/temperature"
-        android:icon="@mipmap/ic_default_image"
+        android:icon="@drawable/menu_temp_edit"
         android:title="Temperature"
         />
     <item
         android:id="@+id/volume"
-        android:icon="@mipmap/ic_default_image"
+        android:icon="@drawable/menu_volume_edit"
         android:title="Volume"
         />
     <item
         android:id="@+id/weight"
-        android:icon="@mipmap/ic_default_image"
+        android:icon="@drawable/menu_weight_edit_1"
         android:title="Weight"
         />
 

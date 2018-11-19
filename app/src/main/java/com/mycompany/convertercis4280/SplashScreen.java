@@ -12,9 +12,6 @@ import android.widget.VideoView;
 
 public class SplashScreen extends AppCompatActivity {
     VideoView logoVid;
-    MediaController m;
-
-    ImageView aniImg;
 
 
     @Override
@@ -24,7 +21,7 @@ public class SplashScreen extends AppCompatActivity {
         setContentView(R.layout.activity_splash_screen);
         logoVid = (VideoView) findViewById(R.id.logoSplash);
 
-        Uri video = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.splash_slide);
+        Uri video = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.splash_slide_02);
         logoVid.setVideoURI(video);
 
 
