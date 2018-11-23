@@ -4,17 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Volume">
+    tools:context=".Volume"
+    android:background="@drawable/animation_list"
+    android:id="@+id/containerV">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <ImageView
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="@string/volume"
         android:id="@+id/title"
-        android:textSize="50sp"
-
+        android:src="@drawable/title_volume_bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="true"
+        android:padding="20dp"
+        android:layout_centerVertical="true"
         />
+
 
     <EditText
         android:autofillHints="@string/volume"
@@ -28,6 +33,10 @@
         android:hint="@string/enter_a_value"
         android:textSize="20sp"
         android:inputType="numberDecimal"
+        android:fontFamily="@font/lemonmilklight"
+        android:textColor="@color/white"
+        android:textColorHint="@color/lightwhite"
+        android:textAlignment="center"
         />
 
     <TextView
@@ -37,7 +46,11 @@
         android:layout_alignBaseline="@+id/editText"
         android:layout_toEndOf="@+id/editText"
         android:text="@string/gal"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:fontFamily="@font/lemonmilklight"
+        android:textColor="@color/white"
+        android:textColorHint="@color/lightwhite"
+        android:textAlignment="center"/>
 
 
     <RadioGroup
@@ -56,7 +69,9 @@
             android:layout_height="wrap_content"
             android:text="@string/gallons"
             android:onClick="radioButtonClick"
-            android:checked="true"/>
+            android:checked="true"
+            android:fontFamily="@font/lemonmilklight"
+            android:textColor="@color/white"/>
 
 
         <RadioButton
@@ -65,6 +80,8 @@
             android:layout_height="wrap_content"
             android:text="@string/liters"
             android:onClick="radioButtonClick"
+            android:fontFamily="@font/lemonmilklight"
+            android:textColor="@color/white"
             />
     </RadioGroup>
 
@@ -76,17 +93,14 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:text="@string/result"
-        android:textSize="20sp" />
+        android:textSize="40dp"
+        android:fontFamily="@font/lemonmilk"
+        android:shadowColor="@color/black"
+        android:shadowDx="9"
+        android:shadowDy="9"
+        android:shadowRadius="15"
+        android:textColor="@color/white"/>
 
-    <Button
-        android:id="@+id/calculate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/calculate"
-        android:layout_below="@id/radioGroup"
-        android:layout_marginTop="40dp"
-        android:layout_centerHorizontal="true"
-        />
 
 
 

@@ -4,16 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Temperature">
+    tools:context=".Temperature"
+    android:background="@drawable/animation_list"
+    android:id="@+id/containerT">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="@string/temperature"
-        android:id="@+id/title"
-        android:textSize="50sp"
+    <!--
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/temperature"
+            android:id="@+id/title"
+            android:textSize="50sp"
+            android:fontFamily="@font/lemonmilk"
+            />
 
+        -->
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/title"
+            android:src="@drawable/title_temp_bold"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="true"
+            android:padding="20dp"
         />
 
     <EditText
@@ -28,6 +44,10 @@
         android:hint="@string/enter_a_value"
         android:textSize="20sp"
         android:inputType="numberDecimal|numberSigned"
+        android:fontFamily="@font/lemonmilklight"
+        android:textColor="@color/white"
+        android:textColorHint="@color/lightwhite"
+        android:textAlignment="center"
         />
 
     <TextView
@@ -37,7 +57,9 @@
         android:layout_alignBaseline="@+id/editText"
         android:layout_toEndOf="@+id/editText"
         android:text="@string/f"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:fontFamily="@font/lemonmilklight"
+        android:textColor="@color/white"/>
 
 
     <RadioGroup
@@ -47,7 +69,8 @@
         android:layout_centerHorizontal="true"
         android:orientation="horizontal"
         android:id="@+id/radioGroup"
-        android:layout_marginTop="40dp">
+        android:layout_marginTop="40dp"
+        >
 
 
         <RadioButton
@@ -57,6 +80,8 @@
             android:text="@string/fahrenheit"
             android:checked="true"
             android:onClick="radioButtonClick"
+            android:fontFamily="@font/lemonmilklight"
+            android:textColor="@color/white"
             />
 
 
@@ -66,6 +91,8 @@
             android:layout_height="wrap_content"
             android:text="@string/celsius"
             android:onClick="radioButtonClick"
+            android:fontFamily="@font/lemonmilklight"
+            android:textColor="@color/white"
             />
     </RadioGroup>
 
@@ -75,10 +102,21 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/radioGroup"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="60dp"
         android:text="@string/result"
-        android:textSize="20sp" />
+        android:textSize="40dp"
+        android:fontFamily="@font/lemonmilk"
+        android:shadowColor="@color/black"
+        android:shadowDx="9"
+        android:shadowDy="9"
+        android:shadowRadius="15"
+        android:textColor="@color/white"
 
+        />
+
+
+
+    <!--
     <Button
         android:id="@+id/calculate"
         android:layout_width="wrap_content"
@@ -88,7 +126,7 @@
         android:layout_marginTop="40dp"
         android:layout_centerHorizontal="true"
         />
-
+     -->
 
 
 

@@ -2,6 +2,7 @@ package com.mycompany.convertercis4280;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
@@ -13,6 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,22 +26,32 @@ public class Volume extends AppCompatActivity {
     private TextView unitText;
     private RadioButton radioButton;
     private TextView result;
-    private Button calculate;
+  //  private Button calculate;
     private RadioGroup radioGroup;
 
     private static final int ACTIVITY_NUM = 2;
+
+    AnimationDrawable anim;
+    RelativeLayout container;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_volume);
 
+        //Run animated background
+        container = (RelativeLayout) findViewById(R.id.containerV);
+        anim = (AnimationDrawable) container.getBackground();
+        anim.setEnterFadeDuration(6000);
+        anim.setExitFadeDuration(2000);
+
+
         // assign variable to xml layout
         editText = findViewById(R.id.editText);
         editText.addTextChangedListener(editTextWatcher);
         unitText = findViewById(R.id.unit);
         result = findViewById(R.id.result);
-        calculate = findViewById(R.id.calculate);
+       // calculate = findViewById(R.id.calculate);
         radioGroup = findViewById(R.id.radioGroup);
 
 
@@ -48,20 +60,13 @@ public class Volume extends AppCompatActivity {
         // set result to empty string
         result.setText("");
 
-        // create on click method for convert button
-        calculate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                // call convert method when button is clicked
-                convert();
-            }
-        }); // end of calculate on click
-
-
-
         setupBottomNavigationView();
     }
+
+
+
+
+
 
     private void setupBottomNavigationView(){
 
@@ -178,6 +183,21 @@ public class Volume extends AppCompatActivity {
         // context whats passed in
         // volume class is destination
         return new Intent(context, Volume.class);
+    }
+
+    //used to run animation when re-opening app
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (anim != null && !anim.isRunning())
+            anim.start();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (anim != null && anim.isRunning())
+            anim.stop();
     }
 
 }
